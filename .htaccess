@@ -1,0 +1,53 @@
+RewriteEngine on
+
+#Вывод постов
+
+RewriteCond %{QUERY_STRING} (?:^|&)sub=([a-zA-Z]+)(?:$|&)
+RewriteRule ^elems/(posts)/posts\.php$  /$1/%1? [R,L]
+RewriteRule ^posts/([a-zA-Z]+)$  /elems/posts/posts\.php?sub=$1?
+
+#Добавление поста
+
+RewriteCond %{QUERY_STRING} (?:^|&)sub=([a-zA-Z]+)(?:$|&)
+RewriteRule ^elems/posts/addPost\.php$  /%1/add_post? [R,L]
+RewriteRule ^([a-zA-Z]+)/add_post$  /elems/posts/addPost\.php?sub=$1?
+
+#Вывод 1 поста
+
+RewriteCond %{QUERY_STRING} (?:^|&)^id=(\d+)$(?:$|&)
+RewriteRule ^elems/.+/post\.php$  /post/%1? [R,L]
+RewriteRule ^post/(\d+)$  /elems/posts/post\.php?id=$1?
+
+#Вывод 1 поста с айди пользователя, которому будут отвечать в сообщении
+
+RewriteCond %{QUERY_STRING} (?:^|&)^id=(\d+)&an_id=(\d+)$(?:$|&)
+RewriteRule ^elems/posts/post\.php$  /post/%1/%2? [R,L]
+RewriteRule ^post/(\d+)/(\d+)$  /elems/posts/post\.php?id=$1&an_id=$2?
+
+#Вывод страницы логина
+
+RewriteCond %{REQUEST_URI} !^/elems/auth/login\.php$
+RewriteRule ^login$  /elems/auth/login\.php
+
+#Вывод страницы регистрации
+
+RewriteCond %{REQUEST_URI} !^/elems/auth/registration\.php$
+RewriteRule ^registration$  /elems/auth/registration\.php
+
+#Вывод профиля
+
+RewriteCond %{QUERY_STRING} (?:^|&)^p=(\w+)$(?:$|&)
+RewriteRule ^elems/profile/profile\.php$  /%1? [R,L]
+RewriteRule ^(\w+)$  /elems/profile/profile\.php?p=$1?
+
+#Вывод страницы смены пароля
+
+RewriteCond %{QUERY_STRING} (?:^|&)^id=(\d+)$(?:$|&)
+RewriteRule ^elems/profile/changePassword\.php$  /change_password/%1? [R,L]
+RewriteRule ^change_password/(\d+)$  /elems/profile/changePassword\.php?id=$1?
+
+#Вывод страницы редактирования "о себе"
+
+RewriteCond %{QUERY_STRING} (?:^|&)^id=(\d+)&p=(\w+)$(?:$|&)
+RewriteRule ^elems/profile/changeAbout\.php$  /change_about/%1/%2? [R,L]
+RewriteRule ^change_about/(\d+)/(\w+)$  /elems/profile/changeAbout\.php?id=$1&p=$2?

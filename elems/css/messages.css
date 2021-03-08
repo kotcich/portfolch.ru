@@ -1,0 +1,60 @@
+.messages_wrapper {
+    margin-top: 30px;
+    margin-left: 23px;
+    margin-bottom: 30px;
+}
+
+.message_wrapper {
+    max-width: 1140px;
+    background-color: #dddddd;
+
+    border: 1px solid #d3d3d3;
+    border-radius: 2px;
+
+    margin-bottom: 4px;
+
+    display: table;
+}
+
+.message_header {
+    width: 100%;
+    color: #5d5d5d;
+    padding-left: 5px;
+    margin-right: 60px;
+    word-spacing: 3px;
+}
+
+.message_header a {
+    font-weight: bold;
+}
+
+.answer {
+    color: red;
+    font-weight: bold;
+}
+
+.message_i {
+    color: red;
+    float: right;
+    margin-right: 10px;
+}
+
+.message_text {
+    display: block;
+    padding: 20px 20px 20px 27px;
+
+    white-space: pre-line;
+}
+
+.message_text a, .post_form_wrapper a {
+    color: rgb(100, 100, 211);
+    font-weight: bold;
+}
+
+.message_answer {
+    color: #ff6600;
+
+    position: relative;
+    bottom: 20px;
+    left: 20px;
+}

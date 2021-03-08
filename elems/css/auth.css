@@ -1,0 +1,79 @@
+.registration {
+    width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.registration span {
+    margin-bottom: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    width: 500px;
+    margin: 0 auto 30px;
+}
+
+input[type="submit"] {
+    width: 200px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+input[type="submit"].in {
+    font-size: 18px;
+    width: 100px;
+    padding: 8px;
+    cursor: pointer;
+}
+
+
+
+
+.login_success, .logout_success, .registr_success {
+    color: green;
+
+    display: block;
+    width: 100%;
+    text-align: center;
+
+    position: absolute;
+    top: 210px;
+}
+
+.login_error {
+    color: red;
+
+    display: block;
+    width: 100%;
+    text-align: center;
+
+    position: absolute;
+    top: 500px;
+}
+
+.login_error_stop, .registr_error_stop, .logout_error {
+    color: red;
+
+    display: block;
+    width: 100%;
+    text-align: center;
+
+    position: absolute;
+    top: 210px;
+}
+
+.registr_error {
+    color: red;
+    
+    display: block;
+    width: 100%;
+    text-align: center;
+
+    position: absolute;
+    top: 675px;
+}

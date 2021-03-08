@@ -1,0 +1,48 @@
+table {
+    text-align: center;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.one {
+    color: cornflowerblue;
+}
+
+.zero {
+    color: crimson;
+}
+
+.two {
+    color: green;
+}
+
+.three {
+    color: violet;
+}
+
+.admin {
+    width: 90%;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.postName {
+    width: 500px;
+}
+
+.admin_success {
+    color: green;
+
+    display: block;
+    width: 100%;
+    text-align: center;
+
+    position: absolute;
+    top: 70px;
+}

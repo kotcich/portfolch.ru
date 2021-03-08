@@ -1,0 +1,106 @@
+a {
+    color: #551a8b;
+    text-decoration: none;
+}
+
+a:hover {
+    color: blue;
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+
+
+
+header {
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about {
+    text-align: justify;
+    background-color: #fcfcfc;
+    border : 1px solid #d2d2d2;
+    padding: 15px;
+}
+
+#logout {
+    font-size: 18px;
+    font-weight: bold;
+
+    position: absolute;
+    top: 25px;
+    left: 40px;
+}
+
+#auth {
+    width: 175px;
+    font-size: 18px;
+    font-weight: bold;
+
+    position: absolute;
+    top: 25px;
+    right: 40px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+.img_main {
+    background-color: #fcfcfc;
+    box-sizing:border-box;
+    border : 1px solid #d2d2d2;
+    width: 1000px;
+    margin: 30px auto 0;
+    padding: 20px;
+}
+
+
+
+
+
+.names {
+    background-color: #fcfcfc;
+    border : 1px solid #d2d2d2;
+    width: 1000px;
+    margin: 30px auto 30px;
+    padding: 20px;
+
+    height: 325px;
+    display: flex;
+    flex-flow: column wrap;
+    align-content: flex-start;
+}
+
+#name {
+    margin-bottom: 4px;
+}
+
+#name:not(:first-child) {
+    margin-top: 15px;
+}
+
+#name:not(:last-child) {
+    margin-right: 80px;
+}
+
+.authority {
+    background-color: #fcfcfc;
+    width: 77px;
+    padding: 0px 5px 5px 5px;
+    margin: 0 auto;
+
+    border : 1px solid #d2d2d2;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}

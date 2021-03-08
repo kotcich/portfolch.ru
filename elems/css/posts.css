@@ -1,0 +1,184 @@
+.addPost {
+    font-size: 20px;
+    font-weight: bold;
+
+    width: 1000px;
+    text-align: center;
+}
+
+.flex {
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.flex form {
+    width: 70%;
+}
+
+.flex form textarea {
+    margin-top: 3px;
+    margin-bottom: 30px;
+}
+
+.flex input[type='file'] {
+    width: 260px;
+}
+
+.addPost_error {
+    width: 100%;
+    color: red;
+    text-align: center;
+    position: absolute;
+    top: 215px;
+}
+
+
+
+.wrapper_posts_grid {
+    width: 85%;
+    margin: 30px auto 30px;
+    text-align: center;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.link_post_grid {
+    display: block;
+    height: 392px;
+    width: 240px;
+    color: black;
+    overflow: hidden;
+
+    margin-left: 8px;
+    margin-right: 8px;
+    margin-bottom: 20px;
+}
+
+.link_post_grid:hover {
+    color: black;
+}
+
+.post_grid {
+    word-wrap: break-word;
+    flex: 0 1 240px;
+    height: 392px;
+
+    background-color: #dcdcdc;
+    border-radius: 6px;
+    position: relative;
+    cursor: pointer;
+}
+
+.img_post_grid {
+    width: 100%;
+    height: 200px;
+
+    padding: 10px;
+    margin: 0;
+    background-color: #dcdcdc;
+    border: none;
+}
+
+.post_grid div {
+    font-weight: bold;
+    padding: 5px;
+    margin-top: 5px;
+    background-color: #cacaca;
+}
+
+.post_grid p {
+    padding: 5px;
+}
+
+
+
+.post_wrapper {
+    width: 1120px;
+    white-space: pre-line;
+
+    margin-left: 10px;
+}
+
+.post_header {
+    color: #5d5d5d;
+    word-spacing: 3px;
+}
+
+.post_name {
+    color: #027dc3;
+    font-weight: bold;
+}
+
+.post_header a {
+    font-weight: bold;
+}
+
+.post_img {
+    width: 250px;
+    height: 170px;
+
+    margin: 0 15px;
+
+    float: left;
+}
+
+.post_form_wrapper {
+    width: 700px;
+    margin-top: 30px;
+    margin-left: 30px;
+    text-align: center;
+}
+
+.post_form_wrapper span {
+    font-size: 20px;
+}
+
+.post_textarea {
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+.delete_post {
+    position: absolute;
+    top: 200px;
+    right: 100px;
+}
+
+
+
+
+.addPost_error_stop, .posts_error_stop, .post_error_stop {
+    color: red;
+
+    display: block;
+    width: 100%;
+    text-align: center;
+
+    position: absolute;
+    top: 210px;
+}
+
+.posts_success_delete {
+    color: green;
+
+    display: block;
+    width: 100%;
+    text-align: center;
+
+    position: absolute;
+    top: 210px;
+}
+
+.addPost_success, .posts_success_message {
+    color: green;
+
+    display: block;
+    width: 100%;
+    text-align: center;
+
+    position: absolute;
+    top: 80px;
+}
