@@ -23,3 +23,7 @@
 https://vk.com/kotcich
 
 kotcich@mail.ru
+
+P.S.
+
+Посты находятся в подкатегории "Аниме"
