@@ -1,9 +1,11 @@
-<?
-if (empty($_COOKIE['auth']) or ( isset($_COOKIE['auth']) and $_COOKIE['status'] != 0 ) ) {
-    session_start();
-    include($_SERVER['DOCUMENT_ROOT'].'/elems/bd.php');
+<?php
+if (empty($_COOKIE['auth']) or isset($_COOKIE['auth']) and $_COOKIE['status'] != 0) {
+    require($_SERVER['DOCUMENT_ROOT'].'/elems/bd.php');
+    require($_SERVER['DOCUMENT_ROOT'].'/elems/header.php');
     $title = trim($_GET['p'], '?');
-    include($_SERVER['DOCUMENT_ROOT'].'/elems/header.php');
+    $profile = trim($_GET['p'], '?');
+//    $status = mysqli_fetch_assoc(mysqli_query($link, $query))['status'];
+    session_start();
 
     if (isset($_SESSION['message'])) {  // Вывод флеш сообщения и последующее удаление оного
         echo $_SESSION['message'];
@@ -41,7 +43,7 @@ if (empty($_COOKIE['auth']) or ( isset($_COOKIE['auth']) and $_COOKIE['status'] 
         $header .= "<div class = 'addPost'><a href = '/elems/profile/changePassword.php?id=$id'>Сменить пароль</a></div>";
         $header .= "<a href = '/elems/profile/changeAbout.php?id=$id&p=$profile' class = 'profile_edit'>Редактировать \"о себе\"</a>";
     }
-    if ($_COOKIE['status'] >= 2 and $_GET['p'] != $profile) {
+    if (isset($_COOKIE['status']) and $_COOKIE['status'] >= 2 and $_GET['p'] != $profile) {
         $header .= "<div class = 'profile_ban'><form method = 'POST'><input type = 'submit' name = 'ban' value = 'забанить'></form></div>";
 
         function banProfile($link, $id, $title) {  // Бан пользователя через его профиль модером или админом
