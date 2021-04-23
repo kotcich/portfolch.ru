@@ -1,4 +1,4 @@
-<?
+<?php
 $query = "SELECT COUNT(*) as count FROM about WHERE `user_id` = $id"; // Проверяю заполнено поле "о себе"
 $count = mysqli_fetch_assoc(mysqli_query($link, $query))['count'];
 

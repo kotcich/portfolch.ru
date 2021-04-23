@@ -1,4 +1,4 @@
-<?
+<?php
 if (isset($_GET['sub']) and isset($_COOKIE['auth']) and $_COOKIE['status'] != 0) {
     session_start();
     include($_SERVER['DOCUMENT_ROOT'].'/elems/bd.php');

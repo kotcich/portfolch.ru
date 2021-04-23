@@ -1,4 +1,4 @@
-<?
+<?php
 if ($_COOKIE['status'] == 3 and isset($_GET['login'])) {
     session_start();
     include($_SERVER['DOCUMENT_ROOT'].'/elems/bd.php');

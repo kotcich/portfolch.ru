@@ -1,4 +1,4 @@
-<?
+<?php
 session_start();
 if (isset($_COOKIE['auth'])) {
     setcookie('auth', '', time() - 100, '/');

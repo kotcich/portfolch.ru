@@ -1,4 +1,4 @@
-<?
+<?php
 if (isset($_GET['sub'])) {  // Запрещаю вход без имени саб категории
     session_start();
     include($_SERVER['DOCUMENT_ROOT'].'/elems/bd.php');

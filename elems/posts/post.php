@@ -1,4 +1,4 @@
-<?
+<?php
 if (isset($_GET['id'])) {  // Запрещаю вход без id поста
     session_start();
     include($_SERVER['DOCUMENT_ROOT'].'/elems/bd.php');

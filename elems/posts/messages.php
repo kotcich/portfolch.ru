@@ -1,4 +1,4 @@
-<?
+<?php
 $query = "SELECT messages.id, `text`, `date`, `answer_user_id`, `user_id`, users.login as `login` FROM messages LEFT JOIN users ON messages.user_id = users.id
 WHERE `post_id` = $post_id";
 $result = mysqli_query($link, $query);

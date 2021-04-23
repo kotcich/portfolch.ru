@@ -1,4 +1,4 @@
-<?
+<?php
 if (empty($_COOKIE['auth'])) {  // Запрещаю вход на страницу уже авторизованным пользователям
     session_start();
     include($_SERVER['DOCUMENT_ROOT'].'/elems/bd.php');

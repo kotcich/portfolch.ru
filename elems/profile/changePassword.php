@@ -1,4 +1,4 @@
-<?
+<?php
 if (isset($_COOKIE['auth']) and isset($_GET['id']) and ($_COOKIE['id'] == trim($_GET['id'], '?')) ) {  // Запрещаю вход неавторизованным и айди подбирателям
     session_start();
     include($_SERVER['DOCUMENT_ROOT'].'/elems/bd.php');

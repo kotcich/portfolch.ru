@@ -1,4 +1,4 @@
-<?
+<?php
 error_reporting(E_ALL);
 ini_set('display_errors', 'on');
 
@@ -10,10 +10,10 @@ function vardump($var) {
 }
 
 
-$host = 'localhost';
-$user = 'root';
-$password = 'root';
-$db_name = 'forum'; 
+$host     = 'localhost';
+$user     = 'root';
+$password = 'Kotcich77';
+$db_name  = 'forum';
 
 
 $link = mysqli_connect($host, $user, $password, $db_name) or die(mysqli_error($link));

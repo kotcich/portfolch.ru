@@ -1,6 +1,6 @@
-<?
-$header = "<h1><a href = \"/\">Портфоляч</a></h1>";
-if (!empty($_COOKIE['auth'])) {
+<?php
+$header = "<h1><a href = '/'>Портфоляч</a></h1>";
+if (isset($_COOKIE['auth'])) {
     $id = $_COOKIE['id'];
     $query = "SELECT `login`, `status` FROM users WHERE id = $id";
     $profile = mysqli_fetch_assoc(mysqli_query($link, $query))['login'];
@@ -10,8 +10,8 @@ if (!empty($_COOKIE['auth'])) {
         $_COOKIE['status'] = $status;
     }
 
-    $header .= "<div id = \"logout\"><a href = \"/elems/auth/logout.php\">Выход</a></div>
-    <div id = \"auth\"><span>Профиль:</span><a href = \"/elems/profile/profile.php?p=$profile\">$profile</a></div>";
+    $header .= "<div id = 'logout'><a href = '/elems/auth/logout.php'>Выход</a></div>
+    <div id = 'auth'><span>Профиль:</span><a href = '/elems/profile/profile.php?p=$profile'>$profile</a></div>";
 } else {
-    $header .= "<div id = \"auth\"><a href = \"/registration\">Sign up</a><a href = \"/login\">Sign in</a></div>";
+    $header .= "<div id = 'auth'><a href = '/registration'>Sign up</a><a href = '/login'>Sign in</a></div>";
 }
